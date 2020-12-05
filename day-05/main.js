@@ -18,7 +18,7 @@ function resolve1(input) {
 
       let index = 0;
 
-      let letters = seat.split("");
+      let chars = seat.split("");
 
       let row = 0;
       let col = 0;
@@ -26,9 +26,9 @@ function resolve1(input) {
       pointer = 128;
 
       do {
-        if (letters[index] === "B") {
+        if (chars[index] === "B") {
           lower += Math.round(pointer / 2);
-        } else if (letters[index] === "F") {
+        } else if (chars[index] === "F") {
           upper -= Math.round(pointer / 2);
         }
 
@@ -41,9 +41,9 @@ function resolve1(input) {
       pointer = 8;
 
       do {
-        if (letters[index] === "R") {
+        if (chars[index] === "R") {
           left += Math.round(pointer / 2);
-        } else if (letters[index] === "L") {
+        } else if (chars[index] === "L") {
           right -= Math.round(pointer / 2);
         }
 
@@ -52,9 +52,9 @@ function resolve1(input) {
       } while (index < 9);
 
       // Last letter. 
-      if (letters[index] === "R") {
+      if (chars[index] === "R") {
         col = right - 1;
-      } else if (letters[index] === "L") {
+      } else if (chars[index] === "L") {
         col = left;
       }
 
